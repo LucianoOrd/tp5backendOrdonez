@@ -6,7 +6,7 @@ const router = express.Router();
 //definimos las rutas para la gestion de agente
 router.get('/', ticketCtrl.getTickets);
 router.post('/', ticketCtrl.createTicket);
-router.get('/espectador', ticketCtrl.getTicketsEspectador);
+router.get('/espectador/:categoria', ticketCtrl.getTicketsEspectador);
 router.put('/:id', ticketCtrl.editTicket);
 router.delete('/:id', ticketCtrl.deleteTicket);
 //exportamos el modulo de rutas
