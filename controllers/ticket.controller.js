@@ -24,7 +24,7 @@ ticketCtrl.getTickets = async (req, res) => {
 }
 
 ticketCtrl.getTicketsEspectador = async (req, res) => {
-    const ticket = await Ticket.find({ categoriaEspectador: req.params.categoria });
+    const ticket = await Ticket.find({ categoriaEspectador: req.params.categoria }).populate("espectador");
     res.json(ticket);
 }
 
